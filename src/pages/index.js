@@ -1,22 +1,18 @@
-import Head from 'next/head'
+import Page from '@/components/Page'
+import Button from '@/components/Button'
+
 import styles from '../../styles/Home.module.css'
 
 export default function Home ({ content }) {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>NextJS App</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
+    <Page>
+      <div className={styles.container}>
+        <main className={styles.main}>
+          <Button label='开始探索' href='/' />
+        </main>
+      </div>
+    </Page>
 
-      <main className={styles.main}>
-        <div>Hi, {content.name}</div>
-      </main>
-
-      <footer className={styles.footer}>
-        Footer
-      </footer>
-    </div>
   )
 }
 

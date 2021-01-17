@@ -1,0 +1,12 @@
+.button {
+  /* border-radius: 10px !important; */
+  /* background-color: #8fab33 !important; */
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  color: #FFF !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  font-weight: normal !important;
+  font-size: 2rem !important;
+  padding: 0.6rem 3rem !important;
+}
