@@ -1,14 +1,15 @@
+import Link from '@/components/Link'
+
 import styles from './Button.module.css'
 
 export default function Button ({ label, href, className }) {
   return (
-    <button className='cursor-pointer'>
-      <a
-        href={href || '/'}
+    <Link to={href || '/'}>
+      <button
         className={className || styles.button}
       >
         {label}
-      </a>
-    </button>
+      </button>
+    </Link>
   )
 }

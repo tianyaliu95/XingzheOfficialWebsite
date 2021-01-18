@@ -3,12 +3,12 @@ import Button from '@/components/Button'
 
 import styles from '../../styles/Home.module.css'
 
-export default function Home ({ content }) {
+export default function About ({ content }) {
   return (
     <Page>
       <div className={styles.container}>
         <main className={styles.main}>
-          <Button label='开始探索' to='/' />
+          <Button label='关于我们' to='/' />
         </main>
       </div>
     </Page>
