@@ -1,0 +1,44 @@
+[
+  {
+    "label": "走进营地",
+    "dropdowns": [
+      {
+        "label": "营地概况",
+        "href": "/about"
+      },
+      {
+        "label": "房车体验",
+        "href": "/rv-experience"
+      },
+      {
+        "label": "露营",
+        "href": "/camping"
+      }
+    ]
+  },
+  {
+    "label": "最新活动",
+    "dropdowns": [
+      {
+        "label": "夏令营",
+        "href": "/events/summer-camps"
+      },
+      {
+        "label": "冬令营",
+        "href": "/events/winter-camps"
+      },
+      {
+        "label": "亲子活动",
+        "href": "/events/family-events"
+      },
+      {
+        "label": "公司团建",
+        "href": "/events/company-events"
+      }
+    ]
+  },
+  {
+    "label": "联系我们",
+    "href": "/contact-us"
+  }
+]

@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import navBarItems from '@/content/navBar/navBarItems.json'
+
 import Link from '@/components/Link'
 
 // import styles from './Header.module.css'
@@ -16,7 +18,7 @@ function StickyNav ({ shouldHaveBgColor }) {
   const logo = shouldHaveBgColor ? '/assets/logo-black.svg' : '/assets/logo-white.svg'
 
   return (
-    <div className={`flex items-center h-24 px-5 ${shouldHaveBgColor ? 'bt-white' : ''}`}>
+    <div className={`flex items-center h-24 px-5 ${shouldHaveBgColor ? 'bg-white' : ''}`}>
       <Link to='/'>
         <img src={logo} className='object-cover w-48 h-auto cursor-pointer' />
       </Link>
@@ -28,50 +30,7 @@ function StickyNav ({ shouldHaveBgColor }) {
 }
 
 function NavBar ({ shouldHaveBgColor }) {
-  const menu = [
-    {
-      label: '走进营地',
-      dropdowns: [
-        {
-          label: '营地概况',
-          href: '/about'
-        },
-        {
-          label: '房车体验',
-          href: '/rv-experience'
-        },
-        {
-          label: '露营',
-          href: '/camping'
-        }
-      ]
-    },
-    {
-      label: '最新活动',
-      dropdowns: [
-        {
-          label: '夏令营',
-          href: '/summer-camps'
-        },
-        {
-          label: '冬令营',
-          href: '/winter-camps'
-        },
-        {
-          label: '亲子活动',
-          href: '/family-events'
-        },
-        {
-          label: '公司团建',
-          href: '/company-events'
-        }
-      ]
-    },
-    {
-      label: '联系我们',
-      href: '/contact-us'
-    }
-  ]
+  const menu = navBarItems
 
   return (
     <ul className='flex'>
@@ -88,17 +47,15 @@ function NavBar ({ shouldHaveBgColor }) {
 }
 
 function NavBarItem ({ item }) {
-  const { label, dropdowns } = item
+  const { label, href = '', dropdowns } = item
 
   const [isHovered, setHovered] = useState(false)
 
   const showMenu = () => {
-    console.log('mouse on')
     setHovered(true)
   }
 
   const hideMenu = () => {
-    console.log('mouse left')
     setHovered(false)
   }
 
@@ -110,7 +67,9 @@ function NavBarItem ({ item }) {
       onFocus={showMenu}
     >
       <a className='px-8 py-6 text-primary font-bold'>
-        <span className={`py-2 ${isHovered ? 'duration-500 ease-in-out border-b border-primary' : ''}`}>{label}</span>
+        <span className={`py-2 ${isHovered ? 'duration-500 ease-in-out border-b border-primary' : ''}`}>
+          <Link to={href}>{label}</Link>
+        </span>
       </a>
       <Dropdown items={dropdowns} shouldExpand={isHovered} />
     </div>

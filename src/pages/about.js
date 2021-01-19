@@ -1,16 +1,14 @@
 import Page from '@/components/Page'
-import Button from '@/components/Button'
-
-import styles from '../../styles/Home.module.css'
+import ImageBanner from '@/components/ImageBanner'
 
 export default function About ({ content }) {
   return (
     <Page>
-      <div className={styles.container}>
-        <main className={styles.main}>
-          <Button label='关于我们' to='/' />
-        </main>
-      </div>
+      <ImageBanner
+        CTA={{ label: '关于我们', href: '/about' }}
+        imagePosition='50% 60%'
+        image='/assets/wallpaper2.jpg'
+      />
     </Page>
 
   )

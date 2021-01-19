@@ -1,13 +1,12 @@
 import Page from '@/components/Page'
 import ImageBanner from '@/components/ImageBanner'
 
-export default function Home ({ content }) {
+export default function ContactUs ({ content }) {
   return (
     <Page>
       <ImageBanner
         CTA={{ label: '开始探索', href: '/about' }}
         image='/assets/wallpaper.jpg'
-        isFullScreen
       />
     </Page>
 

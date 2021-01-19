@@ -6,7 +6,7 @@ export default function Link ({
 }) {
   return (
     <NextLink
-      href={to}
+      href={to || ''}
     >
       {children}
     </NextLink>

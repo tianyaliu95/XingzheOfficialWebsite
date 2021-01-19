@@ -9,4 +9,13 @@
   font-weight: normal !important;
   font-size: 2rem !important;
   padding: 0.6rem 3rem !important;
+  transition: transform 0.5s;
+}
+
+.button:hover {
+  transform:scale(1.05);
+}
+
+.button:focus {
+  outline: none;
 }

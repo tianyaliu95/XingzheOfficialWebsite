@@ -1,0 +1,14 @@
+.container {
+  /* min-height: 100vh; */
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Disable if nav bar share the same background as main page */
+  /* background-image: url('/assets/wallpaper.jpg'); */
+  /* background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%; */
+}
