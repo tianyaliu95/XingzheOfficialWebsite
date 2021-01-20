@@ -3,7 +3,7 @@
     "label": "走进营地",
     "dropdowns": [
       {
-        "label": "营地概况",
+        "label": "关于我们",
         "href": "/about"
       },
       {

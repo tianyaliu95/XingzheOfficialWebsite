@@ -1,11 +1,11 @@
 import Page from '@/components/Page'
-import ImageBanner from '@/components/ImageBanner'
+import ImageBlock from '@/components/ImageBlock'
 
 export default function ContactUs ({ content }) {
   return (
     <Page>
-      <ImageBanner
-        CTA={{ label: '开始探索', href: '/about' }}
+      <ImageBlock
+        CTA={{ label: '联系我们', href: '' }}
         image='/assets/wallpaper.jpg'
       />
     </Page>

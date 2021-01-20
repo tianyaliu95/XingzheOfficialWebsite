@@ -1,10 +1,10 @@
 import Page from '@/components/Page'
-import ImageBanner from '@/components/ImageBanner'
+import ImageBlock from '@/components/ImageBlock'
 
 export default function FamilyEvents ({ content }) {
   return (
     <Page>
-      <ImageBanner
+      <ImageBlock
         CTA={{ label: '开始探索', href: '/about' }}
         image='/assets/wallpaper.jpg'
       />

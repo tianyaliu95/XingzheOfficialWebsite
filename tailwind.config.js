@@ -1,4 +1,5 @@
 module.exports = {
+  important: true,
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -18,6 +19,9 @@ module.exports = {
       },
       spacing: {
         18: '4.5rem'
+      },
+      fontSize: {
+        '3.5xl': '2rem'
       }
     }
   },
