@@ -16,7 +16,7 @@ export default function About ({ content }) {
           return (
             <div key={index} className='my-4'>
               <span className='flex justify-start p-2 text-2xl font-bold'>{section.label}</span>
-              <p className='text-grays-600 p-2'>{section.content}</p>
+              <p className='text-grays-600 p-2' dangerouslySetInnerHTML={{ __html: `${section.content}` }} />
             </div>
           )
         })}

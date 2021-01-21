@@ -1,0 +1,31 @@
+.scrollTop {
+  position: fixed; 
+  width: 4rem;
+  height: 4rem;
+  bottom: 3rem;
+  right: 2rem;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  opacity: 0.75;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  background: #1F1E1A url('/assets/top.svg') no-repeat center 45%;
+  background-size: 2rem;
+}
+
+.scrollTop:hover{
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
