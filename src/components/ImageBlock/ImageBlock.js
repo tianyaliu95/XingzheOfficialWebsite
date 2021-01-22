@@ -8,7 +8,7 @@ export default function ImageBlock ({ onClick, CTA, image, imagePosition, isFull
 
   return (
     <div
-      className={`${styles.container} ${isFullScreen ? 'min-h-screen' : 'h-64'} ${customClassNames}`}
+      className={`${styles.container} ${isFullScreen ? 'min-h-screen' : 'h-64'} ${customClassNames || ''}`}
       style={{
         backgroundImage: `url('${image}')`,
         backgroundSize: 'cover',

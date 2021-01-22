@@ -22,6 +22,9 @@ module.exports = {
       },
       fontSize: {
         '3.5xl': '2rem'
+      },
+      height: {
+        88: '22rem'
       }
     }
   },

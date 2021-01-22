@@ -2,7 +2,6 @@ import { useRef } from 'react'
 
 import Page from '@/components/Page'
 import ImageBlock from '@/components/ImageBlock'
-import ScrollToTop from '@/components/ScrollToTop'
 
 export default function Home ({ content }) {
   const ref = useRef(null)
@@ -43,9 +42,6 @@ export default function Home ({ content }) {
           customClassNames='w-1/3'
         />
       </div>
-
-      <ScrollToTop />
-
     </Page>
 
   )

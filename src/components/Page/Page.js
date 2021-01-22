@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
 import Header from '@/components/Header'
+import ScrollToTop from '@/components/ScrollToTop'
 import Footer from '@/components/Footer'
 
 export default function Page ({ children, screenBackground }) {
@@ -13,6 +14,7 @@ export default function Page ({ children, screenBackground }) {
           {children}
         </main>
       </div>
+      <ScrollToTop />
       <Footer />
     </>
   )
