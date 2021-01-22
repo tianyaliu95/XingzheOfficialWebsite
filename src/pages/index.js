@@ -26,7 +26,7 @@ export default function Home ({ content }) {
         className='flex flex-row my-6 mx-4'
       >
         <ImageBlock
-          CTA={{ label: '房车体验', href: '/rv-experience' }}
+          CTA={{ label: '关于我们', href: '/about' }}
           image='/assets/wallpaper2.jpg'
           customClassNames='w-1/3'
           buttonClassNames=''
@@ -37,7 +37,7 @@ export default function Home ({ content }) {
           customClassNames='w-1/3 mx-2'
         />
         <ImageBlock
-          CTA={{ label: '亲子活动', href: '/events/family-events' }}
+          CTA={{ label: '房车体验', href: '/rv-experience' }}
           image='/assets/wallpaper3.jpg'
           customClassNames='w-1/3'
         />
