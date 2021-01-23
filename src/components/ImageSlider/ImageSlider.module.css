@@ -1,6 +1,7 @@
 .slider {
   overflow: auto;
   white-space: nowrap;
+  padding-top: 1rem;
 }
 
 .slider img {

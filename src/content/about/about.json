@@ -3,24 +3,41 @@
     "label": "营地介绍",
     "content": "<span style=\"font-weight: 600; font-size: 1.25rem\">行者房车营地 </span>是华东地区第一家营地教育服务连锁品牌，建于2016年，面积约60亩，位于南京城东紫金山东南麓五棵松湖畔，距离市中心仅需8分钟车程。营地内有美国、澳洲等进口房车8辆，草坪、露天茶社、湖畔、木屋、星空厅...... <br /> 在这里，春天的草地派对、夏季的露天电影节、秋天的梧桐徒步、冬天的雪地啤酒，让人们络绎不绝、流连忘返。无论是房车露营，还是户外出游、亲子活动、生日派对、朋友聚会、公司团建等，这里都会给你最舒适的体验、最难忘的记忆。(滑动浏览更多图片哦！)",
     "images": [
-      "/assets/about/about_1.jpg",
+      "/assets/about/outside_1.jpg",
+      "/assets/about/about_3.jpg",
       "/assets/about/about_8.jpg",
       "/assets/about/about_2.jpg",
-      "/assets/about/about_3.jpg",
-      "/assets/about/about_4.jpg",
-      "/assets/about/about_5.jpg",
-      "/assets/about/about_6.jpg",
+      "/assets/about/about_1.jpg",
       "/assets/about/about_7.jpg",
+      "/assets/about/about_5.jpg",
       "/assets/about/about_9.jpg",
+      "/assets/about/about_4.jpg"
+    ]
+  },
+  {
+    "label": "",
+    "content": "营地的业务范围包括<span style=\"font-weight: 600; font-size: 1.25rem\"> 房车体验，住宿，露营，亲子活动，冬/夏令营，公司团建，生日PARTY，家庭聚会，婚礼，产品发布会 </span>等等等等。营地中央<span style=\"font-weight: 700; font-size: 1.25rem\"> 1300 </span>平米的天然草坪，可供上百人举行活动，至多50顶帐篷的绝佳露营体验！草坪周边更有<span style=\"font-weight: 600; font-size: 1.25rem\"> 水上小乐园，休闲露台，营地KTV，露天电影，蹦床，真人CS，泵道，网红秋千，桌上足球 </span>等等可供大家尽情玩耍！还有更多的娱乐设施正在搭建当中哦 ~ 敬请期待！",
+    "images": [
+      
+      "/assets/about/rv_1.jpg",
+      "/assets/about/rv_2.jpg",
+      "/assets/about/about_6.jpg",
+      "/assets/about/service_5.jpg",
+      "/assets/about/service_1.jpg",
+      "/assets/about/service_3.jpg",
+      "/assets/about/service_4.jpg",
+      "/assets/about/service_6.jpg",
+      "/assets/about/service_10.jpg",
+      "/assets/about/service_2.jpg",
+      "/assets/about/service_7.jpg",
+      "/assets/about/service_8.jpg",
+      "/assets/about/service_9.jpg",
       "/assets/about/about_10.jpg"
     ]
   },
   {
-    "label": "娱乐设施",
-    "content": "<b>1300</b>平米天然草坪：可供100人左右拓展活动；50顶帐篷露营体验，水上小乐园，休闲露台,营地KTV，露天电影，蹦床，泵道，网红秋千，足球机等等。"
-  },
-  {
-    "label": "营地业务范围",
-    "content": "房车体验，住宿，露营，亲子活动，冬令营，夏令营，团建拓展，生日PARTY ,家庭聚会，婚礼，产品发布会场地提供等。"
+    "label": "",
+    "content": ""
   }
+  
 ]

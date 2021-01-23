@@ -10,5 +10,9 @@
   {
     "label": "联系方式",
     "content": "营地前台：<a style=\"color: #456893; text-decoration: underline; font-weight: 600\" href=\"tel:025-83400166\">025-83400166</a>（9: 00 - 17: 30）<br /> 刘总手机：<a style=\"color: #456893; text-decoration: underline; font-weight: 600\" href=\"tel:18061781855\">+86 18061781855</a>"
+  },
+  {
+    "label": "营地地址",
+    "content": "江苏省南京市玄武区五棵松59号, [placeholder for Baidu map]"
   }
 ]
