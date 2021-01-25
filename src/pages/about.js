@@ -12,7 +12,7 @@ export default function About ({ content }) {
         imagePosition='50% 77%'
         image='/assets/wallpaper3.jpg'
       />
-      <div className='flex flex-col mx-auto container px-20'>
+      <div className='flex flex-col mx-auto container px-20 mt-4'>
         {aboutContent.map((section, index) => {
           const { label = '', content = '', images } = section
 

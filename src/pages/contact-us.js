@@ -11,7 +11,7 @@ export default function ContactUs ({ content }) {
         image='/assets/wallpaper6.jpg'
         imagePosition='50% 22%'
       />
-      <div className='flex flex-col mx-auto container px-20'>
+      <div className='flex flex-col mx-auto container px-20 mt-4'>
         {contactUsContent.map((section, index) => {
           return (
             <div key={index} className='my-4'>

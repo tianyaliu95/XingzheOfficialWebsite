@@ -7,7 +7,6 @@ export default function Home ({ content }) {
   const ref = useRef(null)
 
   const scrollToTarget = () => {
-    console.log('scrolling...')
     ref.current.scrollIntoView({ behavior: 'smooth' })
   }
 
@@ -42,6 +41,11 @@ export default function Home ({ content }) {
           customClassNames='w-1/3'
         />
       </div>
+
+      <ImageBlock
+        image='/assets/image_footer.jpg'
+        isFullScreen
+      />
     </Page>
 
   )

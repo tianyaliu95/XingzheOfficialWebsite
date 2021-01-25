@@ -5,7 +5,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1rem;
 
   /* Disable if nav bar share the same background as main page */
   /* background-image: url('/assets/wallpaper.jpg'); */

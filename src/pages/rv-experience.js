@@ -2,6 +2,9 @@ import { useState, useEffect, useRef } from 'react'
 
 import Page from '@/components/Page'
 import ImageBlock from '@/components/ImageBlock'
+import ImageSlider from '@/components/ImageSlider'
+
+import rvContent from '@/content/rv/rv-experience.json'
 
 export default function RVExperience ({ content }) {
   const jaycoRef = useRef(null)
@@ -31,6 +34,7 @@ export default function RVExperience ({ content }) {
         image='/assets/wallpaper2.jpg'
         imagePosition='50% 62%'
       />
+
       <div className='flex flex-col mx-auto container px-20 py-2'>
 
         <IntroBanner />
@@ -44,35 +48,35 @@ export default function RVExperience ({ content }) {
 
         <div ref={jaycoRef}>
           <RVDetail
-            images='/assets/rv/jayco_2.jpg'
+            images={rvContent?.jayco?.images}
             title='美国Jayco豪华房车'
-            details='lalalalal'
+            details={rvContent?.jayco?.details}
             imageOnLeft
           />
         </div>
 
         <div ref={deesonCRef}>
           <RVDetail
-            images='/assets/rv/deeson1_1.png'
+            images={rvContent?.deeson_couple?.images}
             title='澳洲Deeson情侣房车'
-            details='lalalalal'
+            details={rvContent?.deeson_couple?.details}
           />
         </div>
 
         <div ref={deesonFRef}>
           <RVDetail
-            images='/assets/rv/deeson2_1.jpg'
+            images={rvContent?.deeson_family?.images}
             title='澳洲Deeson家庭房车'
-            details='lalalalal'
+            details={rvContent?.deeson_family?.details}
             imageOnLeft
           />
         </div>
 
         <div ref={sytRef}>
           <RVDetail
-            images='/assets/rv/syt_2.jpg'
+            images={rvContent?.syt?.images}
             title='美国山野特房车'
-            details='lalalalal'
+            details={rvContent?.syt?.details}
           />
         </div>
 
@@ -101,26 +105,37 @@ function RVType ({ name, img, onClick }) {
   )
 }
 
-function RVDetail ({ images, title, details, imageOnLeft }) {
+function RVDetail ({ images, title = '', details, imageOnLeft }) {
   return (
-    <div className='flex flex-row my-6'>
+    <>
+      <div className='flex flex-row my-10'>
 
-      {imageOnLeft && <img src={images} className='object-cover w-1/2 pr-4' />}
+        {/* {imageOnLeft && <img src={images} className='object-cover w-1/2 pr-4' />} */}
+        <div className='w-1/2'><ImageSlider images={images} /></div>
 
-      <div className='flex flex-col w-1/2'>
-        <h3 className='flex justify-center text-xl font-bold'>{title}</h3>
-        <p>{details}</p>
+        <div className='flex flex-col w-1/2 py-6'>
+          <h3 className='flex py-4 justify-center text-xl font-bold'>{title}</h3>
+          <div className='flex flex-col px-10 py-8 justify-center'>
+            {details.map((detail, index) => (
+              <div key={index} className='my-1'>
+                <span className='font-bold text-grays-600 text-lg mr-2'>{`${detail.name}: `}</span>
+                <span>{detail.detail}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* {!imageOnLeft && <img src={images} className='object-cover w-1/2 pl-4' />} */}
       </div>
-
-      {!imageOnLeft && <img src={images} className='object-cover w-1/2 pl-4' />}
-    </div>
+      <hr className='border border-gray-200' />
+    </>
   )
 }
 
 function Cabin () {
   return (
     <div>
-      Placeholder for 木屋。没找到喜欢的，尝试一下全新的木屋？
+      Placeholder for 木屋。没看到心仪的房车，尝试一下全新的木屋住宿体验？
     </div>
   )
 }
