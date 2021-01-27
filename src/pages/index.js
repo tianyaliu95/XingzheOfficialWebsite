@@ -31,13 +31,13 @@ export default function Home ({ content }) {
           buttonClassNames=''
         />
         <ImageBlock
-          CTA={{ label: '露营', href: '/camping' }}
-          image='/assets/wallpaper.jpg'
+          CTA={{ label: '房车体验', href: '/rv-experience' }}
+          image='/assets/wallpaper3.jpg'
           customClassNames='w-1/3 mx-2'
         />
         <ImageBlock
-          CTA={{ label: '房车体验', href: '/rv-experience' }}
-          image='/assets/wallpaper3.jpg'
+          CTA={{ label: '露营', href: '/camping' }}
+          image='/assets/wallpaper.jpg'
           customClassNames='w-1/3'
         />
       </div>

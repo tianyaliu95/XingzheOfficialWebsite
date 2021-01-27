@@ -21,10 +21,16 @@ export default function Page ({ children, screenBackground }) {
 }
 
 function PageHead () {
+  const title = '行者房车'
+  const description = '南京行者房车营地'
+
   return (
     <Head>
-      <title>行者房车</title>
+      <title>{title}</title>
       <link rel='icon' href='/favicon.ico' />
+      <meta name='robots' content='index,follow' />
+      <meta name='title' content={title} />
+      <meta name='description' content={description} />
     </Head>
   )
 }

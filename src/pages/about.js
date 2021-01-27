@@ -1,6 +1,7 @@
 import Page from '@/components/Page'
 import ImageBlock from '@/components/ImageBlock'
 import ImageSlider from '@/components/ImageSlider'
+import Text from '@/components/Text'
 
 import aboutContent from '@/content/about/about.json'
 
@@ -19,7 +20,7 @@ export default function About ({ content }) {
           return (
             <div key={index} className='my-4'>
               <span className='flex justify-start p-2 text-2xl font-bold'>{label}</span>
-              <p className='text-grays-600 px-2 py-4 leading-7' dangerouslySetInnerHTML={{ __html: `${content}` }} />
+              <Text className='text-grays-600 px-2 py-4 leading-7' text={content} />
               {images &&
                 <ImageSlider images={images} />}
             </div>

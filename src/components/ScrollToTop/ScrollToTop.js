@@ -23,7 +23,7 @@ export default function ScrollToTop () {
   return (
     <>
       {showScroll &&
-        <div className={`${styles.scrollTop}`} onClick={scrollTop} />}
+        <div className={`${styles.scrollTop}`} onClick={scrollTop} title='回到顶部' />}
     </>
   )
 }

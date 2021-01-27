@@ -1,4 +1,8 @@
 {
+  "intro": {
+    "p1": "<span style=\"font-size: 2rem; font-weight: 500; color: #1F1E1A\">房车</span>，英文全称<span style=\"font-size: 1.1rem; font-weight: 500\"> Recreational Vehicle</span>，简称<span style=\"font-size: 1.25rem; font-weight: 600\"> RV</span>，是房屋和汽车的结合体。房车兼备汽车的可移动性与房屋住宅的舒适方便性，是随心而动的家。房车的出现帮助我们实现了 “在生活中旅行，在旅行中生活” 的梦想。房车带给我们的是一种最直观的享受，让我们可以把家移动到最好的山、最好的水、最好的天地之间，得以远离城市的熙熙攘攘，告别夜以继日的工作，放下所有烦恼，享受家人朋友的陪伴，近距离感受大自然的魅力。",
+    "p2": "在 <span style=\"font-size: 1.5rem; font-weight: 500; color: #1F1E1A\">行者房车营地</span>，我们拥有十余辆美国、澳大利亚进口以及国产名牌房车，不同款式，各具特色。各种房车设备一应俱全，不同风格的内饰搭配上各式周边娱乐设施，总有一款适合你哦！<span style=\"font-size: 1rem; text-decoration: underline\">(点击图片即可了解房车详情)</span>"
+  },
   "jayco": {
     "images": [
       "/assets/rv/jayco_2.jpg",
@@ -30,7 +34,7 @@
   },
   "deeson_couple": {
     "images": [
-      "/assets/rv/jayco_2.jpg",
+      "/assets/rv/deeson1_1.png",
       "/assets/rv/jayco_2.jpg",
       "/assets/rv/jayco_2.jpg"
     ],
@@ -63,7 +67,7 @@
   },
   "deeson_family": {
     "images": [
-      "/assets/rv/jayco_2.jpg",
+      "/assets/rv/deeson2_1.jpg",
       "/assets/rv/jayco_2.jpg",
       "/assets/rv/jayco_2.jpg"
     ],
@@ -94,9 +98,38 @@
       }
     ]
   },
+  "xingzhe": {
+    "images": [
+      "/assets/rv/xingzhe_1.jpg",
+      "/assets/rv/jayco_2.jpg",
+      "/assets/rv/jayco_2.jpg"
+    ],
+    "details": [
+      {
+        "name": "室内面积",
+        "detail": "20 m²"
+      },
+      {
+        "name": "最佳居住人数",
+        "detail": "2-3人"
+      },
+      {
+        "name": "主卧",
+        "detail": "大床尺寸 1800 * 1500 (mm)"
+      },
+      {
+        "name": "生活设施",
+        "detail": "升降餐桌、车载冰箱、组合酒柜、组合衣柜、组合橱柜、高清电视、60L电热水器、DVD音响系统、LED低压环保照明"
+      },
+      {
+        "name": "卫生间",
+        "detail": "洗脸台、全景大镜、淋浴房"
+      }
+    ]
+  },
   "syt": {
     "images": [
-      "/assets/rv/jayco_2.jpg",
+      "/assets/rv/syt_1.jpg",
       "/assets/rv/jayco_2.jpg",
       "/assets/rv/jayco_2.jpg"
     ],
