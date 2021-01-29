@@ -1,7 +1,7 @@
 {
   "intro": {
     "p1": "<span style=\"font-size: 2rem; font-weight: 500; color: #1F1E1A\">房车</span>，英文全称<span style=\"font-size: 1.1rem; font-weight: 500\"> Recreational Vehicle</span>，简称<span style=\"font-size: 1.25rem; font-weight: 600\"> RV</span>，是房屋和汽车的结合体。房车兼备汽车的可移动性与房屋住宅的舒适方便性，是随心而动的家。房车的出现帮助我们实现了 “在生活中旅行，在旅行中生活” 的梦想。房车带给我们的是一种最直观的享受，让我们可以把家移动到最好的山、最好的水、最好的天地之间，得以远离城市的熙熙攘攘，告别夜以继日的工作，放下所有烦恼，享受家人朋友的陪伴，近距离感受大自然的魅力。",
-    "p2": "在 <span style=\"font-size: 1.5rem; font-weight: 500; color: #1F1E1A\">行者房车营地</span>，我们拥有十余辆美国、澳大利亚进口以及国产名牌房车，不同款式，各具特色。各种房车设备一应俱全，不同风格的内饰搭配上各式周边娱乐设施，总有一款适合你哦！<span style=\"font-size: 1rem; text-decoration: underline\">(点击图片即可了解房车详情)</span>"
+    "p2": "在 <span style=\"font-size: 1.5rem; font-weight: 500; color: #1F1E1A\">行者房车营地</span>，我们拥有十余辆美国、澳大利亚进口以及国产名牌房车，不同款式，各具特色。各种房车设备一应俱全，不同风格的内饰搭配上各式周边娱乐设施以及<span style=\"font-size: 1.5rem; font-weight: 500; color: #1F1E1A\"> 营地精品木屋</span>，总有一款适合你哦！<span style=\"font-size: 1rem; text-decoration: underline\">(点击图片即可了解房车详情)</span>"
   },
   "jayco": {
     "images": [
@@ -159,5 +159,66 @@
         "detail": "洗脸台、全景大镜、淋浴房"
       }
     ]
+  },
+  "cabin": {
+    "intro": "除了各式房车，营地还拥有以下两套精心定制的<span style=\"font-size: 1.5rem; font-weight: 600; color: #1F1E1A\"> 精品木屋</span> 可供游客选择，让您享受别具一格、亲近大自然的住宿体验！",
+    "small": {
+      "images": [
+        "/assets/rv/syt_1.jpg",
+        "/assets/rv/jayco_2.jpg",
+        "/assets/rv/jayco_2.jpg"
+      ],
+      "details": [
+        {
+          "name": "室内面积",
+          "detail": "10 m²"
+        },
+        {
+          "name": "最佳居住人数",
+          "detail": "2人"
+        },
+        {
+          "name": "主卧",
+          "detail": "超大床尺寸 2400 * 1800 (mm)"
+        },
+        {
+          "name": "生活设施",
+          "detail": "升降餐桌、组合橱柜、恒温空调、60L电热水器、LED低压环保照明"
+        },
+        {
+          "name": "卫生间",
+          "detail": "洗脸台、淋浴房"
+        }
+      ]
+    },
+    "large": {
+      "images": [
+        "/assets/rv/syt_1.jpg",
+        "/assets/rv/jayco_2.jpg",
+        "/assets/rv/jayco_2.jpg"
+      ],
+      "details": [
+        {
+          "name": "室内面积",
+          "detail": "25 m² (不含阳台)"
+        },
+        {
+          "name": "最佳居住人数",
+          "detail": "2-3人"
+        },
+        {
+          "name": "主卧",
+          "detail": "超大床尺寸 2400 * 1800 (mm)"
+        },
+        {
+          "name": "生活设施",
+          "detail": "恒温空调、沙发床、阳台椅、60L电热水器、LED低压环保照明、麻将桌"
+        },
+        {
+          "name": "卫生间",
+          "detail": "洗脸台、淋浴房"
+        }
+      ]
+    }
   }
 }

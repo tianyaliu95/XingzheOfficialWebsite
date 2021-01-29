@@ -47,6 +47,7 @@ function NavBar ({ shouldHaveBgColor }) {
 }
 
 function NavBarItem ({ item }) {
+  // Either have a href or a dropdown list
   const { label, href = '', dropdowns } = item
 
   const [isHovered, setHovered] = useState(false)
@@ -83,13 +84,13 @@ function Dropdown ({ items, shouldExpand }) {
 
   return (
     <ul
-      className='absolute bg-white mt-18 px-8 py-4'
+      className='absolute bg-white mt-18 py-4'
     >
       {items.map((item, i) => {
         return (
           <li
             key={i}
-            className='flex justify-center py-3 text-grays-500 font-bold hover:text-primary'
+            className='flex justify-center px-8 py-3 text-grays-500 font-bold hover:text-primary duration-300 ease-in-out'
           >
             <Link to={item.href || '/'}>{item.label}</Link>
           </li>

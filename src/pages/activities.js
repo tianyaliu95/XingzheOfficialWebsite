@@ -7,7 +7,7 @@ import Text from '@/components/Text'
 
 import rvContent from '@/content/rv/rv-experience.json'
 
-export default function RVExperience ({ content }) {
+export default function Activities ({ content }) {
   const jaycoRef = useRef(null)
   const deesonRef = useRef(null)
   const xingzheRef = useRef(null)
@@ -160,22 +160,6 @@ function Cabin () {
   return (
     <div className='mx-2 my-6'>
       <Text text={rvContent.cabin.intro} className='my-4' />
-
-      <div className='flex justify-center mt-8'>
-        <hr className='bg-grays-500 w-1/2' />
-      </div>
-
-      <RVDetail
-        images={rvContent?.cabin?.small?.images}
-        title='桃叶精品木屋 (小)'
-        details={rvContent?.cabin?.small?.details}
-      />
-      <RVDetail
-        images={rvContent?.cabin?.large?.images}
-        title='桃叶精品木屋 (大)'
-        details={rvContent?.cabin?.large?.details}
-        imageOnLeft
-      />
     </div>
   )
 }
