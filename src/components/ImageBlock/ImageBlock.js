@@ -19,7 +19,8 @@ export default function ImageBlock ({ onClick, CTA, image, imagePosition, isFull
       {(href || onClick) ? (
         <Button label={label} href={href} onClick={onClick} className={buttonClassNames} />
       ) : (
-        label && <h1 className='text-white text-3.5xl py-2 px-12 border-t-2 border-b-2'>{label}</h1> // show nothing when no CTA/label
+        // buttonClassNames will overwrite the entire pre-set css
+        label && <h1 className={`${buttonClassNames || 'text-white text-3.5xl py-2 px-12 border-t-2 border-b-2'}`}>{label}</h1> // show nothing when no CTA/label
       )}
     </div>
   )

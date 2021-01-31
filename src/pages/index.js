@@ -28,7 +28,6 @@ export default function Home ({ content }) {
           CTA={{ label: '关于我们', href: '/about' }}
           image='/assets/wallpaper2.jpg'
           customClassNames='w-1/3'
-          buttonClassNames=''
         />
         <ImageBlock
           CTA={{ label: '房车体验', href: '/rv-experience' }}

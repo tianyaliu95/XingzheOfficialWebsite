@@ -1,12 +1,59 @@
 {
   "intro": {
-    "p1": "<span style=\"font-size: 2rem; font-weight: 500; color: #1F1E1A\">房车</span>，英文全称<span style=\"font-size: 1.1rem; font-weight: 500\"> Recreational Vehicle</span>，简称<span style=\"font-size: 1.25rem; font-weight: 600\"> RV</span>，是房屋和汽车的结合体。房车兼备汽车的可移动性与房屋住宅的舒适方便性，是随心而动的家。房车的出现帮助我们实现了 “在生活中旅行，在旅行中生活” 的梦想。房车带给我们的是一种最直观的享受，让我们可以把家移动到最好的山、最好的水、最好的天地之间，得以远离城市的熙熙攘攘，告别夜以继日的工作，放下所有烦恼，享受家人朋友的陪伴，近距离感受大自然的魅力。",
-    "p2": "在 <span style=\"font-size: 1.5rem; font-weight: 500; color: #1F1E1A\">行者房车营地</span>，我们拥有十余辆美国、澳大利亚进口以及国产名牌房车，不同款式，各具特色。各种房车设备一应俱全，不同风格的内饰搭配上各式周边娱乐设施，总有一款适合你哦！<span style=\"font-size: 1rem; text-decoration: underline\">(点击图片即可了解房车详情)</span>"
+    "p1": "<span style=\"font-size: 1.25rem; font-weight: 600; color: #1F1E1A\">在行者房车营地</span>，除了各式房车体验，还有众多娱乐项目和设施可供游客们尽情玩耍哦！可供挑选的活动项目包括（但不限于）：<br/> <span style=\"font-size: 1.5rem; font-weight: 500; color: #1F1E1A\"></span>"
   },
-  "cabin": {
-    "intro": "除了各式房车，营地还拥有精心定制的<span style=\"font-size: 1.5rem; font-weight: 500; color: #1F1E1A\"> 精品木屋</span> ，",
-    "title": "",
-    "images": "",
-    "details": ""
+  "activities": [
+    {
+      "name": "水上乐园",
+      "image": "/assets/about/service_1.jpg"
+    },
+    {
+      "name": "真人CS",
+      "image": "/assets/about/service_10.jpg"
+    },
+    {
+      "name": "星空茶社",
+      "image": "/assets/about/about_9.jpg"
+    },
+    {
+      "name": "烧烤",
+      "image": "/assets/activities/bbq.jpg"
+    },
+    {
+      "name": "露营",
+      "image": "/assets/about/service_2.jpg"
+    },
+    {
+      "name": "山地自行车",
+      "image": "/assets/about/service_4.jpg"
+    },
+    {
+      "name": "生日宴",
+      "image": "/assets/activities/birthday.jpg"
+    },
+    {
+      "name": "室外婚礼",
+      "image": "/assets/about/service_3.jpg"
+    },
+    {
+      "name": "吊床",
+      "image": "/assets/activities/hammock.jfif"
+    },
+    {
+      "name": "垂钓",
+      "image": "/assets/activities/fishing.jpg"
+    },
+    {
+      "name": "蹦床",
+      "image": "/assets/about/service_8.jpg"
+    },
+    {
+      "name": "木雕",
+      "image": "/assets/activities/wood.jpg"
+    }    
+  ],
+  "outro": {
+    "p1": "除了以上活动，营地目前正在积极开发更多的娱乐设施哦！欢迎您随时&nbsp;",
+    "p2": "&nbsp;等待您的光临！"
   }
 }
