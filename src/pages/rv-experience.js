@@ -4,6 +4,7 @@ import Page from '@/components/Page'
 import ImageBlock from '@/components/ImageBlock'
 import ImageSlider from '@/components/ImageSlider'
 import Text from '@/components/Text'
+import EmailSubscription from '@/components/EmailSubscription'
 
 import rvContent from '@/content/rv/rv-experience.json'
 
@@ -36,7 +37,7 @@ export default function RVExperience ({ content }) {
         imagePosition='50% 22%'
       />
 
-      <div className='flex flex-col mx-auto container px-20 py-2'>
+      <div className='flex flex-col mx-auto container px-20 pt-2 pb-6'>
 
         <IntroBanner />
         <Divider text='房车款式' widthOfEachHalf='40%' />
@@ -87,12 +88,14 @@ export default function RVExperience ({ content }) {
             title='美国山野特房车'
             details={rvContent?.syt?.details}
             imageOnLeft
+            noDivider
           />
         </div>
 
         <Cabin />
 
       </div>
+      <EmailSubscription height='h-64' />
     </Page>
 
   )
@@ -126,7 +129,7 @@ function RVType ({ name, img, onClick }) {
   )
 }
 
-function RVDetail ({ images, title = '', details, imageOnLeft }) {
+function RVDetail ({ images, title = '', details, imageOnLeft, noDivider }) {
   return (
     <>
       <div className='flex flex-row my-10'>
@@ -136,34 +139,41 @@ function RVDetail ({ images, title = '', details, imageOnLeft }) {
 
         <div className='flex flex-col w-1/2 py-6'>
           <h3 className='flex py-4 justify-center text-xl font-bold'>{title}</h3>
-          <div className='flex flex-col px-10 py-8 justify-center'>
+          <div className='flex flex-col px-10 py-4 justify-center'>
             {details.map((detail, index) => (
               <div key={index} className='my-1'>
                 <span className='font-bold text-grays-600 text-lg mr-2'>{`${detail.name}: `}</span>
                 <span>{detail.detail}</span>
               </div>
             ))}
+            <div className='flex justify-center'>
+              <a
+                className='cursor-pointer underline text-link text-xl font-bold mt-5 tracking-wider opacity-100 transform hover:opacity-75 duration-300'
+                href='https://hotels.corporatetravel.ctrip.com/hotels/detailPage?hotelId=5771043'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                立即前往携程预订
+              </a>
+            </div>
           </div>
         </div>
 
         {!imageOnLeft && <ImageSlider images={images} className='object-cover w-1/2 pl-4' />}
       </div>
 
-      <div className='flex justify-center'>
-        <hr className='bg-grays-500 w-1/2' />
-      </div>
+      {!noDivider &&
+        <div className='flex justify-center'>
+          <hr className='bg-grays-500 w-1/2' />
+        </div>}
     </>
   )
 }
 
 function Cabin () {
   return (
-    <div className='mx-2 my-6'>
-      <Text text={rvContent.cabin.intro} className='my-4' />
-
-      <div className='flex justify-center mt-8'>
-        <hr className='bg-grays-500 w-1/2' />
-      </div>
+    <div className='mx-2 mb-6'>
+      <Text text={rvContent.cabin.intro} className='my-4 flex justify-center text-lg bg-grays-100 py-12' />
 
       <RVDetail
         images={rvContent?.cabin?.small?.images}
@@ -175,6 +185,7 @@ function Cabin () {
         title='桃叶精品木屋 (大)'
         details={rvContent?.cabin?.large?.details}
         imageOnLeft
+        noDivider
       />
     </div>
   )

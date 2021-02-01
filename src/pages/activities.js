@@ -2,6 +2,7 @@ import Page from '@/components/Page'
 import ImageBlock from '@/components/ImageBlock'
 import Text from '@/components/Text'
 import Link from '@/components/Link'
+import EmailSubscription from '@/components/EmailSubscription'
 
 import activitiesContent from '@/content/activities/activities.json'
 
@@ -32,6 +33,7 @@ export default function Activities ({ content }) {
         <OutroBanner />
 
       </div>
+      <EmailSubscription height='h-72' />
     </Page>
 
   )

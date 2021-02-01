@@ -18,7 +18,7 @@ function StickyNav ({ shouldHaveBgColor }) {
   const logo = shouldHaveBgColor ? '/assets/logo-black.svg' : '/assets/logo-white.svg'
 
   return (
-    <div className={`flex items-center h-24 px-5 ${shouldHaveBgColor ? 'bg-white' : ''}`}>
+    <div className={`hidden lg:flex items-center h-24 px-5 ${shouldHaveBgColor ? 'bg-white' : ''}`}>
       <Link to='/'>
         <img src={logo} className='object-cover w-48 h-auto cursor-pointer' />
       </Link>

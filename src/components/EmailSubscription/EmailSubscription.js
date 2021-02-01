@@ -35,19 +35,19 @@ export default function EmailSubscription ({ height }) {
     return true
   }
 
-  const backgroundImage = '/assets/wallpaper9.jpg'
+  const backgroundImage = '/assets/wallpaper11.jpg'
 
   return (
     <div
       className={`flex flex-col items-center justify-center bg-grays-700 bg-no-repeat bg-cover w-full ${height}`}
       style={{
         backgroundImage: `url(${backgroundImage})`,
-        backgroundPosition: '50% 100%'
+        backgroundPosition: '50% 50%'
       }}
     >
-      <div className='my-10'>
+      <div className='my-10 mx-6'>
 
-        <div className='mx-3 text-white text-center font-primary text-lg'>
+        <div className='mx-3 text-white text-center font-primary lg:text-xl'>
           欢迎订阅行者房车营地以掌握关于营地的最新资讯及优惠折扣哦！
         </div>
 
@@ -91,7 +91,7 @@ function Message ({ shouldDisplay, messageType }) {
     : '请提供有效的邮箱地址'
 
   const color = messageType === 'success'
-    ? 'text-gold'
+    ? 'text-green-300'
     : 'text-grays-100'
 
   return (
