@@ -21,7 +21,7 @@ export default function Activities ({ content }) {
         <div className='flex flex-wrap justify-center my-6'>
           {activitiesContent?.activities?.map((activity, index) => (
             <div
-              key={`activity_${index}`}
+              key={index}
               className='flex w-1/3 pr-0.5 pb-0.5'
             >
               <Activity name={activity?.name} img={activity?.image} />
@@ -49,7 +49,7 @@ function IntroBanner () {
 
 function Activity ({ name, img }) {
   return (
-    <div className='flex w-full transform hover:scale-110 duration-300 z-10 hover:z-20'>
+    <div className='flex w-full transform hover:scale-110 duration-300 hover:z-10'>
       <ImageBlock
         CTA={{ label: name, href: '' }}
         image={img || '/assets/wallpaper.jpg'}

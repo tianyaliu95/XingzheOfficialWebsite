@@ -1,20 +1,15 @@
 [
   {
     "label": "走进营地",
-    "dropdowns": [
-      {
-        "label": "关于我们",
-        "href": "/about"
-      },
-      {
-        "label": "房车体验",
-        "href": "/rv-experience"
-      },
-      {
-        "label": "娱乐活动",
-        "href": "/activities"
-      }
-    ]
+    "href": "/about"
+  },
+  {
+    "label": "房车体验",
+    "href": "/rv-experience"
+  },
+  {
+    "label": "娱乐活动",
+    "href": "/activities"
   },
   {
     "label": "最新活动",

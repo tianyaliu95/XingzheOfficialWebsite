@@ -35,7 +35,7 @@ export default function Home ({ content }) {
           customClassNames='w-1/3 mx-2'
         />
         <ImageBlock
-          CTA={{ label: '露营', href: '/camping' }}
+          CTA={{ label: '娱乐活动', href: '/activities' }}
           image='/assets/wallpaper.jpg'
           customClassNames='w-1/3'
         />

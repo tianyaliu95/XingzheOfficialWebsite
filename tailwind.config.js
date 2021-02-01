@@ -7,6 +7,9 @@ module.exports = {
       colors: {
         primary: '#1F1E1A',
         link: '#456893',
+        success: '#B38859',
+        gold: '#C19F79',
+        error: '#EBD9D9',
         grays: {
           800: '#717279',
           700: '#3A3B3D',
