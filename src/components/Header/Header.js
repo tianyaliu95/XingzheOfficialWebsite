@@ -48,6 +48,7 @@ function MobileNavBar () {
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen)
+    console.log('reached')
   }
 
   const dropdownAnimation = isMenuOpen
@@ -68,13 +69,13 @@ function MobileNavBar () {
       </div>
 
       <div className={`absolute mt-12 w-full h-auto bg-white border border-white z-40 transform duration-300 ${dropdownAnimation}`}>
-        <NavBar menu={menu} />
+        <NavBar menu={menu} mobileOnClickCTA={toggleMenu} />
       </div>
     </div>
   )
 }
 
-function NavBar ({ shouldHaveBgColor, menu }) {
+function NavBar ({ shouldHaveBgColor, menu, mobileOnClickCTA = () => {} }) {
   return (
     <ul className='flex flex-col lg:flex-row py-4 lg:py-0'>
       {menu.map((item, i) => (
@@ -82,7 +83,7 @@ function NavBar ({ shouldHaveBgColor, menu }) {
           key={i}
           className={`${shouldHaveBgColor ? 'text-black' : 'text-white'}`}
         >
-          <NavBarItem item={item} />
+          <NavBarItem item={item} mobileOnClickCTA={mobileOnClickCTA} />
         </li>
       ))}
     </ul>
@@ -90,7 +91,7 @@ function NavBar ({ shouldHaveBgColor, menu }) {
 }
 
 // Each Level 1 CTA
-function NavBarItem ({ item }) {
+function NavBarItem ({ item, mobileOnClickCTA = () => {} }) {
   // Either have a href or a dropdown list
   const { label, href = '', dropdowns } = item
 
@@ -110,25 +111,25 @@ function NavBarItem ({ item }) {
 
   return (
     <div
-      className='flex flex-col lg:flex-row'
+      className={`flex flex-col lg:flex-row ${dropdowns ? '' : 'cursor-pointer'}`}
       onMouseEnter={showMenu}
       onMouseLeave={hideMenu}
       onFocus={toggleMenu}
       onClick={toggleMenu}
     >
-      <div className='mx-auto lg:mx-8 py-5 lg:py-6 text-xl lg:text-base text-grays-600 lg:text-primary font-bold'>
+      <div className='flex justify-center lg:px-8 py-5 lg:py-6 text-xl lg:text-base text-grays-600 lg:text-primary font-bold'>
         <span className={`py-2 ${isHovered ? 'duration-500 ease-in-out border-b border-primary' : ''}`}>
           {dropdowns
             ? <span>{label}</span>
-            : <Link to={href}>{label}</Link>}
+            : <Link to={href} onClick={mobileOnClickCTA}>{label}</Link>}
         </span>
       </div>
-      <Dropdown items={dropdowns} shouldExpand={isHovered} />
+      <Dropdown items={dropdowns} shouldExpand={isHovered} mobileOnClickCTA={mobileOnClickCTA} />
     </div>
   )
 }
 
-function Dropdown ({ items, shouldExpand }) {
+function Dropdown ({ items, shouldExpand, mobileOnClickCTA = () => {} }) {
   if (!shouldExpand || !items) {
     return null
   }
@@ -143,7 +144,7 @@ function Dropdown ({ items, shouldExpand }) {
             key={i}
             className='flex justify-center px-8 py-3 text-grays-500 text-lg lg:text-base font-bold hover:text-primary transform duration-300 ease-in-out'
           >
-            <Link to={item.href || '/'}>{item.label}</Link>
+            <Link to={item.href || '/'} onClick={mobileOnClickCTA}>{item.label}</Link>
           </li>
         )
       })}
