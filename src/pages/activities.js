@@ -51,7 +51,7 @@ function IntroBanner () {
 
 function Activity ({ name, img }) {
   return (
-    <div className='flex w-full transform hover:scale-110 duration-300 hover:z-10'>
+    <div className='flex w-full transform hover:scale-110 duration-300 z-10 hover:z-20'>
       <ImageBlock
         CTA={{ label: name, href: '' }}
         image={img || '/assets/wallpaper.jpg'}
