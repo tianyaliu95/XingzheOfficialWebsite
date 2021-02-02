@@ -7,7 +7,9 @@
     "images": [
       "/assets/rv/jayco_2.jpg",
       "/assets/about/rv_1.jpg",
-      "/assets/about/rv_2.jpg"
+      "/assets/about/rv_2.jpg",
+      "/assets/rv/jayco_3.jpg",
+      "/assets/rv/jayco_4.jpg"
     ],
     "details": [
       {
@@ -31,8 +33,11 @@
   "deeson_couple": {
     "images": [
       "/assets/rv/deeson1_1.png",
-      "/assets/rv/jayco_2.jpg",
-      "/assets/rv/jayco_2.jpg"
+      "/assets/rv/deeson1_5.jpg",
+      "/assets/rv/deeson1_4.jpg",
+      "/assets/about/about_8.jpg",
+      "/assets/rv/deeson1_2.jpg",
+      "/assets/rv/deeson1_3.jpg"
     ],
     "details": [
       {
@@ -53,15 +58,16 @@
       },
       {
         "name": "生活设施",
-        "detail": "升降餐桌、车载冰箱、组合酒柜、组合衣柜、组合橱柜、1.5P中央空调、60L电热水器、DVD音响系统、LED低压环保照明、全景大镜、淋浴房"
+        "detail": "升降餐桌、车载冰箱、组合酒柜、组合衣柜、组合橱柜、中央空调、电热水器、高清电视、DVD音响系统、LED环保照明、全景大镜、淋浴房"
       }
     ]
   },
   "deeson_family": {
     "images": [
       "/assets/rv/deeson2_1.jpg",
-      "/assets/rv/jayco_2.jpg",
-      "/assets/rv/jayco_2.jpg"
+      "/assets/rv/deeson2_4.jpg",
+      "/assets/rv/deeson2_3.jpg",
+      "/assets/rv/deeson2_2.jpg"
     ],
     "details": [
       {
@@ -82,15 +88,16 @@
       },
       {
         "name": "生活设施",
-        "detail": "升降餐桌、车载冰箱、组合酒柜、组合衣柜、组合橱柜、1.5P中央空调、60L电热水器、DVD音响系统、LED低压环保照明、全景大镜、淋浴房"
+        "detail": "升降餐桌、车载冰箱、组合酒柜、组合衣柜、组合橱柜、中央空调、电热水器、高清电视、DVD音响系统、LED环保照明、全景大镜、淋浴房"
       }
     ]
   },
   "xingzhe": {
     "images": [
       "/assets/rv/xingzhe_1.jpg",
-      "/assets/rv/jayco_2.jpg",
-      "/assets/rv/jayco_2.jpg"
+      "/assets/rv/xingzhe_2.jpg",
+      "/assets/rv/xingzhe_4.jpg",
+      "/assets/rv/xingzhe_3.jpg"
     ],
     "details": [
       {
@@ -107,15 +114,15 @@
       },
       {
         "name": "生活设施",
-        "detail": "升降餐桌、车载冰箱、组合酒柜、组合衣柜、组合橱柜、高清电视、60L电热水器、DVD音响系统、LED低压环保照明、全景大镜、淋浴房"
+        "detail": "升降餐桌、车载冰箱、组合酒柜、组合衣柜、组合橱柜、高清电视、60L电热水器、DVD音响系统、LED环保照明、全景大镜、淋浴房"
       }
     ]
   },
   "syt": {
     "images": [
       "/assets/rv/syt_1.jpg",
-      "/assets/rv/jayco_2.jpg",
-      "/assets/rv/jayco_2.jpg"
+      "/assets/rv/syt_2.jpg",
+      "/assets/rv/syt_3.jpg"
     ],
     "details": [
       {
@@ -124,7 +131,7 @@
       },
       {
         "name": "最佳居住人数",
-        "detail": "2-3人"
+        "detail": "2-4人"
       },
       {
         "name": "主卧",
@@ -144,9 +151,10 @@
     "intro": "除了各式房车，行者营地还拥有以下两套精心定制的<span style=\"font-size: 1.5rem; font-weight: 600; color: #1F1E1A; line-height: 1.6rem\">&nbsp;精品木屋&nbsp;</span>可供游客选择，让您享受别具一格、亲近大自然的住宿体验！",
     "small": {
       "images": [
-        "/assets/rv/syt_1.jpg",
-        "/assets/rv/jayco_2.jpg",
-        "/assets/rv/jayco_2.jpg"
+        "/assets/about/about_6.jpg",
+        "/assets/rv/cabin1_1.jpg",
+        "/assets/rv/cabin1_2.jpg",
+        "/assets/rv/cabin1_3.jpg"
       ],
       "details": [
         {
@@ -169,9 +177,11 @@
     },
     "large": {
       "images": [
-        "/assets/rv/syt_1.jpg",
-        "/assets/rv/jayco_2.jpg",
-        "/assets/rv/jayco_2.jpg"
+        "/assets/rv/cabin2_1.jpg",
+        "/assets/rv/cabin2_2.jpg",
+        "/assets/rv/cabin2_3.jpg",
+        "/assets/rv/cabin2_4.jpg",
+        "/assets/rv/cabin2_5.jpg"
       ],
       "details": [
         {
