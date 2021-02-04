@@ -40,7 +40,11 @@ export default function RVExperience ({ content }) {
       <div className='flex flex-col mx-auto container px-4 lg:px-20 pt-2 pb-6'>
 
         <IntroBanner />
+        <hr className='lg:hidden bg-grays-500 w-full my-4' />
+
         <Divider text='房车款式' widthOfEachHalf='40%' />
+
+        <div className='lg:hidden flex justify-center'><span className='text-grays-600 text-base text-center'>（点击图片了解更多）</span></div>
 
         <div className='flex flex-col lg:flex-row justify-center my-6'>
           <RVType name='美国Jayco豪华房车' img='/assets/rv/jayco_2.jpg' onClick={() => startScrolling(jaycoRef)} />
