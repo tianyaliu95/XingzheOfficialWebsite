@@ -53,13 +53,13 @@ export default function RVExperience ({ content }) {
           <RVType name='美国山野特房车' img='/assets/rv/syt_1.jpg' onClick={() => startScrolling(sytRef)} />
         </div>
 
-        <hr className='bg-grays-500 w-full my-4' />
+        <hr ref={jaycoRef} className='bg-grays-500 w-full my-4' />
         <div className='lg:hidden'>
           <Divider text='房车详情' widthOfEachHalf='40%' />
           <div className='flex justify-center'><span className='mt-1 text-grays-600 text-base text-center'>（左右滑动查看更多图片）</span></div>
         </div>
 
-        <div ref={jaycoRef}>
+        <div>
           <RVDetail
             images={rvContent?.jayco?.images}
             title='美国Jayco豪华房车'

@@ -87,7 +87,7 @@ function MobileNavBar () {
 
 function NavBar ({ shouldHaveBgColor, menu, mobileOnClickCTA = () => {} }) {
   return (
-    <ul className='flex flex-col lg:flex-row py-4 lg:py-0'>
+    <ul className='flex flex-col lg:flex-row py-4 lg:py-0 overflow-y-auto max-h-screen'>
       {menu.map((item, i) => (
         <li
           key={i}
