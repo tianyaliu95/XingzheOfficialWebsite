@@ -127,7 +127,7 @@ function NavBarItem ({ item, mobileOnClickCTA = () => {} }) {
       // onFocus={toggleMenu}
       onClick={toggleMenu}
     >
-      <div className='flex justify-center lg:px-8 py-2 lg:py-6 text-xl lg:text-base text-grays-600 lg:text-primary font-bold'>
+      <div className='flex justify-center lg:px-8 pt-1 pb-2 lg:py-6 text-lg lg:text-base text-grays-600 lg:text-primary font-bold'>
         <span className={`py-2 ${isHovered ? 'lg:duration-500 lg:ease-in-out lg:border-b lg:border-primary' : ''}`}>
           {dropdowns
             ? <span>{label}</span>
@@ -152,7 +152,7 @@ function Dropdown ({ items, shouldExpand, mobileOnClickCTA = () => {} }) {
         return (
           <li
             key={i}
-            className='flex justify-center px-8 py-3 text-grays-500 text-lg lg:text-base font-bold hover:text-primary transform duration-300 ease-in-out'
+            className='flex justify-center px-8 py-3 text-grays-500 text-base lg:text-base font-bold hover:text-primary transform duration-300 ease-in-out'
           >
             <Link to={item.href || '/'} onClick={mobileOnClickCTA}>{item.label}</Link>
           </li>
