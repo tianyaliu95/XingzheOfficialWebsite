@@ -78,7 +78,7 @@ function MobileNavBar () {
         </Link>
       </div>
 
-      <div className={`absolute mt-12 w-full h-auto  bg-grays-100 lg:bg-white border-b border-grays-200 lg:border-none z-40 overflow-auto transform duration-300 ${dropdownAnimation}`}>
+      <div className={`absolute mt-12 w-full h-auto bg-grays-100 lg:bg-white border-b border-grays-200 lg:border-none z-40 overflow-auto transform duration-300 ${dropdownAnimation}`}>
         <NavBar menu={menu} mobileOnClickCTA={toggleMenu} />
       </div>
     </div>
@@ -87,7 +87,7 @@ function MobileNavBar () {
 
 function NavBar ({ shouldHaveBgColor, menu, mobileOnClickCTA = () => {} }) {
   return (
-    <ul className='flex flex-col lg:flex-row py-4 lg:py-0 overflow-y-auto max-h-screen'>
+    <ul className='flex flex-col lg:flex-row pt-4 pb-6 lg:py-0 overflow-y-auto max-h-screen'>
       {menu.map((item, i) => (
         <li
           key={i}
@@ -127,7 +127,7 @@ function NavBarItem ({ item, mobileOnClickCTA = () => {} }) {
       // onFocus={toggleMenu}
       onClick={toggleMenu}
     >
-      <div className='flex justify-center lg:px-8 py-3 lg:py-6 text-xl lg:text-base text-grays-600 lg:text-primary font-bold'>
+      <div className='flex justify-center lg:px-8 py-2 lg:py-6 text-xl lg:text-base text-grays-600 lg:text-primary font-bold'>
         <span className={`py-2 ${isHovered ? 'lg:duration-500 lg:ease-in-out lg:border-b lg:border-primary' : ''}`}>
           {dropdowns
             ? <span>{label}</span>
