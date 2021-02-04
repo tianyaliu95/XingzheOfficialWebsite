@@ -128,7 +128,7 @@ function RVType ({ name, img, onClick }) {
   return (
     <div className='flex flex-col lg:mx-2' title={name}>
       <div className='flex justify-center'>
-        <img src={img} className='object-cover justify-center w-full lg:w-64 h-48 rounded-sm cursor-pointer transform hover:scale-110 hover:opacity-75 duration-500' onClick={onClick} />
+        <img src={img} className='object-cover justify-center w-full lg:w-64 h-48 rounded-sm cursor-pointer transform hover:scale-110 lg:hover:opacity-75 duration-500' onClick={onClick} />
       </div>
       <div className='flex justify-center mt-2 lg:mt-3 mb-6 lg:mb-0 text-grays-600 font-semibold'>{name}</div>
     </div>

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import navBarItems from '@/content/navBar/navBarItems.json'
 
@@ -46,6 +46,17 @@ function MobileNavBar () {
 
   const [isMenuOpen, setMenuOpen] = useState(false)
 
+  // Disable scroll on page while isMenuOpen
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden'
+      document.body.style.position = 'fixed'
+    } else {
+      document.body.style.overflow = 'inherit'
+      document.body.style.position = ''
+    }
+  }, [isMenuOpen])
+
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen)
   }
@@ -55,7 +66,7 @@ function MobileNavBar () {
     : '-translate-y-full'
 
   return (
-    <div className='flex flex-col lg:hidden sticky top-0 z-30'>
+    <div className='flex flex-col lg:hidden sticky top-0 z-30 scrolling-touch'>
       <div className='flex flex-row items-center h-12 bg-grays-100 border-b border-grays-200 z-50'>
         <img
           src={hamburgerIcon}
@@ -67,7 +78,7 @@ function MobileNavBar () {
         </Link>
       </div>
 
-      <div className={`absolute mt-12 w-full h-auto bg-white border border-white z-40 transform duration-300 ${dropdownAnimation}`}>
+      <div className={`absolute mt-12 w-full h-auto  bg-grays-100 lg:bg-white border-b border-grays-200 lg:border-none z-40 overflow-auto transform duration-300 ${dropdownAnimation}`}>
         <NavBar menu={menu} mobileOnClickCTA={toggleMenu} />
       </div>
     </div>
@@ -116,7 +127,7 @@ function NavBarItem ({ item, mobileOnClickCTA = () => {} }) {
       // onFocus={toggleMenu}
       onClick={toggleMenu}
     >
-      <div className='flex justify-center lg:px-8 py-5 lg:py-6 text-xl lg:text-base text-grays-600 lg:text-primary font-bold'>
+      <div className='flex justify-center lg:px-8 py-3 lg:py-6 text-xl lg:text-base text-grays-600 lg:text-primary font-bold'>
         <span className={`py-2 ${isHovered ? 'lg:duration-500 lg:ease-in-out lg:border-b lg:border-primary' : ''}`}>
           {dropdowns
             ? <span>{label}</span>
@@ -135,7 +146,7 @@ function Dropdown ({ items, shouldExpand, mobileOnClickCTA = () => {} }) {
 
   return (
     <ul
-      className='flex flex-col lg:absolute mx-auto lg:mx-0 bg-white lg:mt-18 py-4'
+      className='flex flex-col lg:absolute mx-auto lg:mx-0 bg-grays-100 lg:bg-white lg:mt-18 lg:py-4'
     >
       {items.map((item, i) => {
         return (
