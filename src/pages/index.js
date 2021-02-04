@@ -23,22 +23,22 @@ export default function Home ({ content }) {
 
       <div
         ref={ref}
-        className='flex flex-row my-6 mx-4'
+        className='flex flex-col lg:flex-row my-1 lg:my-6 mx-2 lg:mx-4'
       >
         <ImageBlock
           CTA={{ label: '关于我们', href: '/about' }}
           image='/assets/wallpaper2.jpg'
-          customClassNames='w-1/3'
+          customClassNames='my-1 lg:my-0 lg:w-1/3'
         />
         <ImageBlock
           CTA={{ label: '房车体验', href: '/rv-experience' }}
           image='/assets/wallpaper3.jpg'
-          customClassNames='w-1/3 mx-2'
+          customClassNames='my-1 lg:my-0 lg:w-1/3 lg:mx-2'
         />
         <ImageBlock
           CTA={{ label: '娱乐活动', href: '/activities' }}
           image='/assets/wallpaper.jpg'
-          customClassNames='w-1/3'
+          customClassNames='my-1 lg:my-0 lg:w-1/3'
         />
       </div>
 

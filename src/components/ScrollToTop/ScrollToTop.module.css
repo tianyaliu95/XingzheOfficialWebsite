@@ -29,3 +29,9 @@
     opacity: 0.75;
   }
 }
+
+@media only screen and (max-width: 780px) {
+  .scrollTop {
+    display: none;
+  }
+}

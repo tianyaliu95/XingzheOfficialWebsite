@@ -7,15 +7,21 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: normal;
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding: 0.6rem 3rem;
   transition: transform 0.5s;
 }
 
-.button:hover {
-  transform:scale(1.05);
-}
-
 .button:focus {
   outline: none;
+}
+
+@media only screen and (min-width: 780px) {
+  .button {
+    font-size: 2rem;
+    transition: transform 0.5s;
+  }
+  .button:hover {
+    transform:scale(1.05);
+  }
 }

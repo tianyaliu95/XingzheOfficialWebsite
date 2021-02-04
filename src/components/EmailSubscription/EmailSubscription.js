@@ -54,7 +54,7 @@ export default function EmailSubscription ({ height }) {
         <div className='flex items-center justify-center mx-4 mt-4 mb-1 lg:mx-0'>
           <div className='flex flex-col w-full lg:flex-row'>
             <input
-              className='placeholder-grays-400 text-center lg:text-left pl-3 w-auto h-10 lg:h-auto lg:w-2/3'
+              className='placeholder-grays-400 text-center lg:text-left lg:pl-3 w-auto h-10 lg:h-auto lg:w-2/3 rounded-none'
               placeholder='请输入您的邮箱'
               type='email'
               name='email'

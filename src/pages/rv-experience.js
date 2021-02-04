@@ -37,19 +37,23 @@ export default function RVExperience ({ content }) {
         imagePosition='50% 22%'
       />
 
-      <div className='flex flex-col mx-auto container px-20 pt-2 pb-6'>
+      <div className='flex flex-col mx-auto container px-4 lg:px-20 pt-2 pb-6'>
 
         <IntroBanner />
         <Divider text='房车款式' widthOfEachHalf='40%' />
 
-        <div className='flex flex-row justify-center my-6'>
+        <div className='flex flex-col lg:flex-row justify-center my-6'>
           <RVType name='美国Jayco豪华房车' img='/assets/rv/jayco_2.jpg' onClick={() => startScrolling(jaycoRef)} />
           <RVType name='澳洲Deeson情侣/家庭房车' img='/assets/rv/deeson1_1.png' onClick={() => startScrolling(deesonRef)} />
           <RVType name='行者情侣房车' img='/assets/rv/xingzhe_1.jpg' onClick={() => startScrolling(xingzheRef)} />
           <RVType name='美国山野特房车' img='/assets/rv/syt_1.jpg' onClick={() => startScrolling(sytRef)} />
         </div>
 
-        <Divider text='' widthOfEachHalf='50%' />
+        <hr className='bg-grays-500 w-full my-4' />
+        <div className='lg:hidden'>
+          <Divider text='房车详情' widthOfEachHalf='40%' />
+          <div className='flex justify-center'><span className='mt-1 text-grays-600 text-base text-center'>（左右滑动查看更多图片）</span></div>
+        </div>
 
         <div ref={jaycoRef}>
           <RVDetail
@@ -112,19 +116,21 @@ function IntroBanner () {
 
 function Divider ({ text, widthOfEachHalf }) {
   return (
-    <div className='flex items-center justify-between my-4'>
-      <hr className='bg-grays-500' style={{ width: widthOfEachHalf }} />
+    <div className='flex items-center justify-center lg:justify-between my-4'>
+      <hr className='hidden lg:flex bg-grays-500' style={{ width: widthOfEachHalf }} />
       <span className='text-grays-600 text-2xl'>{text}</span>
-      <hr className='bg-grays-500' style={{ width: widthOfEachHalf }} />
+      <hr className='hidden lg:flex bg-grays-500' style={{ width: widthOfEachHalf }} />
     </div>
   )
 }
 
 function RVType ({ name, img, onClick }) {
   return (
-    <div className='flex flex-col mx-2' title={name}>
-      <img src={img} className='object-cover w-64 h-48 rounded-sm cursor-pointer transform hover:scale-110 hover:opacity-75 duration-500' onClick={onClick} />
-      <div className='flex justify-center mt-3 text-grays-600 font-semibold'>{name}</div>
+    <div className='flex flex-col lg:mx-2' title={name}>
+      <div className='flex justify-center'>
+        <img src={img} className='object-cover justify-center w-full lg:w-64 h-48 rounded-sm cursor-pointer transform hover:scale-110 hover:opacity-75 duration-500' onClick={onClick} />
+      </div>
+      <div className='flex justify-center mt-2 lg:mt-3 mb-6 lg:mb-0 text-grays-600 font-semibold'>{name}</div>
     </div>
   )
 }
@@ -132,17 +138,19 @@ function RVType ({ name, img, onClick }) {
 function RVDetail ({ images, title = '', details, imageOnLeft, noDivider }) {
   return (
     <>
-      <div className='flex flex-row my-10'>
+      <div className='flex flex-col lg:flex-row mt-2 mb-6 lg:my-10'>
 
         {/* TODO - Replace by image carousel */}
-        {imageOnLeft && <ImageSlider images={images} className='w-1/2 pr-4' />}
+        {imageOnLeft && <ImageSlider images={images} className='object-cover w-full lg:w-1/2 lg:pr-4' />}
+        {/* Image always on top for mobile */}
+        {!imageOnLeft && <ImageSlider images={images} className='lg:hidden object-cover w-full' />}
 
-        <div className='flex flex-col w-1/2 py-6'>
-          <h3 className='flex py-4 justify-center text-xl font-bold'>{title}</h3>
-          <div className='flex flex-col px-10 py-4 justify-center'>
+        <div className='flex flex-col w-full lg:w-1/2 lg:py-6'>
+          <h3 className='flex py-3 lg:py-4 justify-center text-lg lg:text-xl font-bold'>{title}</h3>
+          <div className='flex flex-col px-4 lg:px-10 py-2 lg:py-4 justify-center'>
             {details.map((detail, index) => (
               <div key={index} className='my-1'>
-                <span className='font-bold text-grays-600 text-lg mr-2'>{`${detail.name}: `}</span>
+                <span className='font-bold text-grays-600 text-base lg:text-lg mr-2'>{`${detail.name}: `}</span>
                 <span>{detail.detail}</span>
               </div>
             ))}
@@ -159,12 +167,12 @@ function RVDetail ({ images, title = '', details, imageOnLeft, noDivider }) {
           </div>
         </div>
 
-        {!imageOnLeft && <ImageSlider images={images} className='object-cover w-1/2 pl-4' />}
+        {!imageOnLeft && <ImageSlider images={images} className='hidden lg:flex object-cover w-1/2 pl-4' />}
       </div>
 
       {!noDivider &&
         <div className='flex justify-center'>
-          <hr className='bg-grays-500 w-1/2' />
+          <hr className='bg-grays-500 w-full lg:w-1/2' />
         </div>}
     </>
   )
@@ -173,7 +181,9 @@ function RVDetail ({ images, title = '', details, imageOnLeft, noDivider }) {
 function Cabin () {
   return (
     <div className='mx-2 mb-6'>
-      <Text text={rvContent.cabin.intro} className='my-4 flex justify-center text-lg bg-grays-100 py-12' />
+      <Text text={rvContent.cabin.intro} className='hidden lg:flex my-4 px-4 py-12 justify-center lg:text-lg bg-grays-100 text-center' />
+
+      <hr className='bg-grays-500 w-full lg:hidden' />
 
       <RVDetail
         images={rvContent?.cabin?.small?.images}

@@ -48,7 +48,6 @@ function MobileNavBar () {
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen)
-    console.log('reached')
   }
 
   const dropdownAnimation = isMenuOpen
@@ -56,7 +55,7 @@ function MobileNavBar () {
     : '-translate-y-full'
 
   return (
-    <div className='flex flex-col lg:hidden sticky top-0'>
+    <div className='flex flex-col lg:hidden sticky top-0 z-30'>
       <div className='flex flex-row items-center h-12 bg-grays-100 border-b border-grays-200 z-50'>
         <img
           src={hamburgerIcon}
@@ -114,11 +113,11 @@ function NavBarItem ({ item, mobileOnClickCTA = () => {} }) {
       className={`flex flex-col lg:flex-row ${dropdowns ? '' : 'cursor-pointer'}`}
       onMouseEnter={showMenu}
       onMouseLeave={hideMenu}
-      onFocus={toggleMenu}
+      // onFocus={toggleMenu}
       onClick={toggleMenu}
     >
       <div className='flex justify-center lg:px-8 py-5 lg:py-6 text-xl lg:text-base text-grays-600 lg:text-primary font-bold'>
-        <span className={`py-2 ${isHovered ? 'duration-500 ease-in-out border-b border-primary' : ''}`}>
+        <span className={`py-2 ${isHovered ? 'lg:duration-500 lg:ease-in-out lg:border-b lg:border-primary' : ''}`}>
           {dropdowns
             ? <span>{label}</span>
             : <Link to={href} onClick={mobileOnClickCTA}>{label}</Link>}

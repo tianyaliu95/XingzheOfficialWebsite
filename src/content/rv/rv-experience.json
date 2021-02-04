@@ -148,7 +148,7 @@
     ]
   },
   "cabin": {
-    "intro": "除了各式房车，行者营地还拥有以下两套精心定制的<span style=\"font-size: 1.5rem; font-weight: 600; color: #1F1E1A; line-height: 1.6rem\">&nbsp;精品木屋&nbsp;</span>可供游客选择，让您享受别具一格、亲近大自然的住宿体验！",
+    "intro": "除了各式房车，行者营地还拥有以下两套精心定制的<span style=\"display: inline-block; font-size: 1.5rem; font-weight: 600; color: #1F1E1A; line-height: 1.6rem\">&nbsp;精品木屋&nbsp;</span>可供游客选择，让您享受别具一格、亲近大自然的住宿体验！",
     "small": {
       "images": [
         "/assets/about/about_6.jpg",
