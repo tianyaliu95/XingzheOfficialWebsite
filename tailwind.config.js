@@ -33,7 +33,8 @@ module.exports = {
         72: '18rem',
         80: '20rem',
         88: '22rem',
-        96: '32rem'
+        96: '32rem',
+        max: '36rem'
       },
       opacity: {
         10: '10%',

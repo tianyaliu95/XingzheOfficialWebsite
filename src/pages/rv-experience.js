@@ -1,8 +1,10 @@
 import { useState, useEffect, useRef } from 'react'
 
+import useMobile from '@/hooks/useMobile'
+
 import Page from '@/components/Page'
 import ImageBlock from '@/components/ImageBlock'
-import ImageSlider from '@/components/ImageSlider'
+import ImageCarousel from '@/components/ImageCarousel'
 import Text from '@/components/Text'
 import EmailSubscription from '@/components/EmailSubscription'
 
@@ -54,7 +56,7 @@ export default function RVExperience ({ content }) {
         </div>
 
         <hr ref={jaycoRef} className='bg-grays-500 w-full my-4' />
-        <div className='lg:hidden'>
+        <div className='lg:hidden pt-8'>
           <Divider text='房车详情' widthOfEachHalf='40%' />
           <div className='flex justify-center'><span className='mt-1 text-grays-600 text-base text-center'>（左右滑动查看更多图片）</span></div>
         </div>
@@ -68,7 +70,7 @@ export default function RVExperience ({ content }) {
           />
         </div>
 
-        <div ref={deesonRef}>
+        <div ref={deesonRef} className='pt-10 lg:pt-0'>
           <RVDetail
             images={rvContent?.deeson_couple?.images}
             title='澳洲Deeson情侣房车'
@@ -82,7 +84,7 @@ export default function RVExperience ({ content }) {
           />
         </div>
 
-        <div ref={xingzheRef}>
+        <div ref={xingzheRef} className='pt-10 lg:pt-0'>
           <RVDetail
             images={rvContent?.xingzhe?.images}
             title='行者情侣房车'
@@ -90,7 +92,7 @@ export default function RVExperience ({ content }) {
           />
         </div>
 
-        <div ref={sytRef}>
+        <div ref={sytRef} className='pt-10 lg:pt-0'>
           <RVDetail
             images={rvContent?.syt?.images}
             title='美国山野特房车'
@@ -140,14 +142,19 @@ function RVType ({ name, img, onClick }) {
 }
 
 function RVDetail ({ images, title = '', details, imageOnLeft, noDivider }) {
+  const isMobile = useMobile()
+  const ctripLink = isMobile
+    ? 'http://m.ctrip.com/webapp/hotel/hoteldetail/5771043.html'
+    : 'https://hotels.corporatetravel.ctrip.com/hotels/detailPage?hotelId=5771043'
+
   return (
     <>
-      <div className='flex flex-col lg:flex-row mt-2 mb-6 lg:my-10'>
+      <div className='flex flex-col lg:flex-row mt-4 mb-6 lg:mt-10 lg:mb-4'>
 
-        {/* TODO - Replace by image carousel */}
-        {imageOnLeft && <ImageSlider images={images} className='object-cover w-full lg:w-1/2 lg:pr-4' />}
+        {imageOnLeft && <ImageCarousel images={images} className='w-full lg:w-1/2 lg:pr-4' />}
+
         {/* Image always on top for mobile */}
-        {!imageOnLeft && <ImageSlider images={images} className='lg:hidden object-cover w-full' />}
+        {!imageOnLeft && <ImageCarousel images={images} className='lg:hidden object-cover w-full' />}
 
         <div className='flex flex-col w-full lg:w-1/2 lg:py-6'>
           <h3 className='flex py-3 lg:py-4 justify-center text-lg lg:text-xl font-bold'>{title}</h3>
@@ -161,9 +168,9 @@ function RVDetail ({ images, title = '', details, imageOnLeft, noDivider }) {
             <div className='flex justify-center'>
               <a
                 className='cursor-pointer underline text-link text-xl font-bold mt-5 tracking-wider opacity-100 transform hover:opacity-75 duration-300'
-                href='https://hotels.corporatetravel.ctrip.com/hotels/detailPage?hotelId=5771043'
-                target='_blank'
-                rel='noopener noreferrer'
+                href={ctripLink}
+                // target='_blank'
+                // rel='noopener noreferrer'
               >
                 立即前往携程预订
               </a>
@@ -171,7 +178,7 @@ function RVDetail ({ images, title = '', details, imageOnLeft, noDivider }) {
           </div>
         </div>
 
-        {!imageOnLeft && <ImageSlider images={images} className='hidden lg:flex object-cover w-1/2 pl-4' />}
+        {!imageOnLeft && <ImageCarousel images={images} className='hidden lg:flex object-cover w-1/2 pl-4' />}
       </div>
 
       {!noDivider &&
