@@ -50,7 +50,6 @@ function MobileNavBar () {
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden'
-      document.body.style.position = 'fixed'
     } else {
       document.body.style.overflow = 'inherit'
       document.body.style.position = ''
