@@ -1,5 +1,7 @@
 import { useRef } from 'react'
 
+import { setCacheStaleWhileRevalidate } from '@/serverless/cdn'
+
 import Page from '@/components/Page'
 import Text from '@/components/Text'
 import ImageBlock from '@/components/ImageBlock'
@@ -129,6 +131,8 @@ function Contact () {
 }
 
 export async function getServerSideProps ({ req, res, query }) {
+  setCacheStaleWhileRevalidate(res)
+
   const content = {
     name: 'Tianya'
   }

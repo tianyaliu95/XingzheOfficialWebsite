@@ -1,3 +1,5 @@
+import { setCacheStaleWhileRevalidate } from '@/serverless/cdn'
+
 import Page from '@/components/Page'
 import ImageBlock from '@/components/ImageBlock'
 import ImageSlider from '@/components/ImageSlider'
@@ -35,6 +37,8 @@ export default function About ({ content }) {
 }
 
 export async function getServerSideProps ({ req, res, query }) {
+  setCacheStaleWhileRevalidate(res)
+
   const content = {
     name: 'Tianya'
   }

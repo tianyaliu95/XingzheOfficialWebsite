@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 
+import { setCacheStaleWhileRevalidate } from '@/serverless/cdn'
+
 import useMobile from '@/hooks/useMobile'
 
 import Page from '@/components/Page'
@@ -213,6 +215,8 @@ function Cabin () {
 }
 
 export async function getServerSideProps ({ req, res, query }) {
+  setCacheStaleWhileRevalidate(res)
+
   const content = {
     name: 'Tianya'
   }

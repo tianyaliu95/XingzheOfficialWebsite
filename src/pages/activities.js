@@ -1,3 +1,5 @@
+import { setCacheStaleWhileRevalidate } from '@/serverless/cdn'
+
 import Page from '@/components/Page'
 import ImageBlock from '@/components/ImageBlock'
 import Text from '@/components/Text'
@@ -82,6 +84,8 @@ function OutroBanner () {
 }
 
 export async function getServerSideProps ({ req, res, query }) {
+  setCacheStaleWhileRevalidate(res)
+
   const content = {
     name: 'Tianya'
   }
