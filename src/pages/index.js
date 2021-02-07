@@ -131,7 +131,7 @@ function Contact () {
 }
 
 export async function getServerSideProps ({ req, res, query }) {
-  setCacheStaleWhileRevalidate(res)
+  setCacheStaleWhileRevalidate(res, 86400)
 
   const content = {
     name: 'Tianya'
