@@ -31,6 +31,7 @@ function PageHead () {
       <meta name='robots' content='index,follow' />
       <meta name='title' content={title} />
       <meta name='description' content={description} />
+      <meta http-equiv='Content-Security-Policy' content='upgrade-insecure-requests' />
     </Head>
   )
 }
