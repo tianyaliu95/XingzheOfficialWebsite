@@ -120,6 +120,7 @@ function Contact () {
   return (
     <div className='flex flex-col lg:flex-row mx-auto container px-4 lg:px-20'>
       {/* 高德地图 */}
+      <meta http-equiv='Content-Security-Policy' content='upgrade-insecure-requests' />
       <iframe className='hidden lg:flex w-full lg:w-1/2 h-96 mt-2 lg:mt-12 lg:mr-6' frameBorder='0' scrolling='no' marginHeight='0' marginWidth='0' src='https://surl.amap.com/oD5EF71x4GU' />
 
       <div className='w-full lg:w-1/2 flex flex-col justify-center text-center'>
