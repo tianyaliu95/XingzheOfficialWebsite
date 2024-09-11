@@ -13,11 +13,13 @@
     "ignore": []
   },
   "dependencies": {
+    "autoprefixer": "^9",
     "next": "14.2.6",
+    "postcss": "^7",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-responsive-carousel": "^3.2.23",
-    "tailwindcss": "^3.4.10",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "use-media": "^1.5.0"
   },
   "devDependencies": {
